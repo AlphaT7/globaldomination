@@ -1,0 +1,319 @@
+<html>
+<head>
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/americandomination.css">
+</head>
+<body>
+    <div id="center_width">
+        <div id="regions_div"></div>
+        <div id="control_panel">
+            <table>
+                <tr>
+                    <td id="cp_title" colspan="2">
+                        Region
+                        <svg id="list" onclick="viewSettings();" width="1em" height="1em" fill="currentColor" viewBox="0 0 32 32" data-reactid=".lk2z3vp4w0.1.0.1.$icon-27.0">
+                            <path d="M3 8 A3 3 0 0 0 9 8 A3 3 0 0 0 3 8 M12 6 L28 6 L28 10 L12 10z M3 16 A3 3 0 0 0 9 16 A3 3 0 0 0 3 16 M12 14 L28 14 L28 18 L12 18z M3 24 A3 3 0 0 0 9 24 A3 3 0 0 0 3 24 M12 22 L28 22 L28 26 L12 26z " data-reactid=".lk2z3vp4w0.1.0.1.$icon-27.0.0"></path>
+                        </svg>
+                    </td>
+                    <td colspan="2" rowspan="2">
+                        <div id="cp_content">
+                            <select id="region_selector">
+                                <option>Choose a Continent</option>
+                                <option value="world_list,world">World</option>
+                                <option value="africa_list,002">Africa</option>
+                                <option value="europe_list,150">Europe</option>
+                                <option value="americas_list,019">Americas</option>
+                                <option value="asia_list,142">Asia</option>
+                                <option value="oceania_list,009">Oceania</option>
+                            </select>
+                            <select id="subcontinent_selector"></select>
+                            <select id="country_selector"></select>
+                        </div>
+                        <!-- end cp_content -->
+                    </td>
+                </tr>
+                <tr>
+                    <td id="cp_info1">Controlling Faction</td>
+                    <td id="cp_info2">Troop Count</td>
+                </tr>
+            </table>
+        </div>
+        <!-- end control_panel -->
+        <div id="info_panel">
+            <div id="info_panel_title">Actions</div>
+            <div id="attack_button">Attack</div>
+            <div id="reinforce_button">Reenforce</div>
+            <label>
+                Attack From:
+                <span class="custom-dropdown custom-dropdown--white">
+                    <select class="custom-dropdown__select custom-dropdown__select--white">
+                        <option value="alabama">Alabama</option>
+                        <option value="alaska">Alaska</option>
+                        <option value="arizona">Arizona</option>
+                        <option value="arkansas">Arkansas</option>
+                        <option value="california">California</option>
+                        <option value="colorado">Colorado</option>
+                        <option value="connecticut">Connecticut</option>
+                        <option value="delaware">Delaware</option>
+                        <option value="dc">DC</option>
+                        <option value="florida">Florida</option>
+                        <option value="georgia">Georgia</option>
+                        <option value="hawaii">Hawaii</option>
+                        <option value="idaho">Idaho</option>
+                        <option value="illinois">Illinois</option>
+                        <option value="indiana">Indiana</option>
+                        <option value="iowa">Iowa</option>
+                        <option value="kansas">Kansas</option>
+                        <option value="kentucky">Kentucky</option>
+                        <option value="louisiana">Louisiana</option>
+                        <option value="maine">Maine</option>
+                        <option value="maryland">Maryland</option>
+                        <option value="massachusetts">Massachusetts</option>
+                        <option value="michigan">Michigan</option>
+                        <option value="minnesota">Minnesota</option>
+                        <option value="mississippi">Mississippi</option>
+                        <option value="missouri">Missouri</option>
+                        <option value="montana">Montana</option>
+                        <option value="nebraska">Nebraska</option>
+                        <option value="nevada">Nevada</option>
+                        <option value="new hampshire">New Hampshire</option>
+                        <option value="new jersey">New Jersey</option>
+                        <option value="new mexico">New Mexico</option>
+                        <option value="new york">New York</option>
+                        <option value="north carolina">North Carolina</option>
+                        <option value="north dakota">North Dakota</option>
+                        <option value="ohio">Ohio</option>
+                        <option value="oklahoma">Oklahoma</option>
+                        <option value="oregon">Oregon</option>
+                        <option value="pennsylvania">Pennsylvania</option>
+                        <option value="rhode island">Rhode Island</option>
+                        <option value="south carolina">South Carolina</option>
+                        <option value="south dakota">South Dakota</option>
+                        <option value="tennessee">Tennessee</option>
+                        <option value="texas">Texas</option>
+                        <option value="utah">Utah</option>
+                        <option value="vermont">Vermont</option>
+                        <option value="virginia">Virginia</option>
+                        <option value="washington">Washington</option>
+                        <option value="west virginia">West Virginia</option>
+                        <option value="wisconsin">Wisconsin</option>
+                        <option value="wyoming">Wyoming</option>
+                    </select>
+                </span>
+            </label>
+            <label>
+                Reenforce From:
+                <span class="custom-dropdown custom-dropdown--white">
+                    <select class="custom-dropdown__select custom-dropdown__select--white">
+                        <option value="alabama">Alabama</option>
+                        <option value="alaska">Alaska</option>
+                        <option value="arizona">Arizona</option>
+                        <option value="arkansas">Arkansas</option>
+                        <option value="california">California</option>
+                        <option value="colorado">Colorado</option>
+                        <option value="connecticut">Connecticut</option>
+                        <option value="delaware">Delaware</option>
+                        <option value="dc">DC</option>
+                        <option value="florida">Florida</option>
+                        <option value="georgia">Georgia</option>
+                        <option value="hawaii">Hawaii</option>
+                        <option value="idaho">Idaho</option>
+                        <option value="illinois">Illinois</option>
+                        <option value="indiana">Indiana</option>
+                        <option value="iowa">Iowa</option>
+                        <option value="kansas">Kansas</option>
+                        <option value="kentucky">Kentucky</option>
+                        <option value="louisiana">Louisiana</option>
+                        <option value="maine">Maine</option>
+                        <option value="maryland">Maryland</option>
+                        <option value="massachusetts">Massachusetts</option>
+                        <option value="michigan">Michigan</option>
+                        <option value="minnesota">Minnesota</option>
+                        <option value="mississippi">Mississippi</option>
+                        <option value="missouri">Missouri</option>
+                        <option value="montana">Montana</option>
+                        <option value="nebraska">Nebraska</option>
+                        <option value="nevada">Nevada</option>
+                        <option value="new hampshire">New Hampshire</option>
+                        <option value="new jersey">New Jersey</option>
+                        <option value="new mexico">New Mexico</option>
+                        <option value="new york">New York</option>
+                        <option value="north carolina">North Carolina</option>
+                        <option value="north dakota">North Dakota</option>
+                        <option value="ohio">Ohio</option>
+                        <option value="oklahoma">Oklahoma</option>
+                        <option value="oregon">Oregon</option>
+                        <option value="pennsylvania">Pennsylvania</option>
+                        <option value="rhode island">Rhode Island</option>
+                        <option value="south carolina">South Carolina</option>
+                        <option value="south dakota">South Dakota</option>
+                        <option value="tennessee">Tennessee</option>
+                        <option value="texas">Texas</option>
+                        <option value="utah">Utah</option>
+                        <option value="vermont">Vermont</option>
+                        <option value="virginia">Virginia</option>
+                        <option value="washington">Washington</option>
+                        <option value="west virginia">West Virginia</option>
+                        <option value="wisconsin">Wisconsin</option>
+                        <option value="wyoming">Wyoming</option>
+                    </select>
+                </span>
+            </label>
+
+        </div>
+    </div>
+    <!-- end center_width -->
+    <div id="settings">
+        <div id="settings_title">
+            Settings
+            <svg id="close_settings" onclick="closeSettings();" width="1em" height="1em" fill="currentColor" viewBox="0 0 32 32" data-reactid=".lk2z3vp4w0.1.0.1.$icon-10.0">
+                <path d="M4 8 L8 4 L16 12 L24 4 L28 8 L20 16 L28 24 L24 28 L16 20 L8 28 L4 24 L12 16 z " data-reactid=".lk2z3vp4w0.1.0.1.$icon-10.0.0"></path>
+            </svg>
+        </div>
+        <div id="settings_content_left">
+            <!--<div class="settings_button" id="sb1">Login</div>-->
+            <div class="settings_button" id="sb2">Create User</div>
+            <div class="settings_button" id="sb3">Host Game</div>
+            <div class="settings_button" id="sb4">Join Game</div>
+            <div class="settings_button" id="sb5">About</div>
+        </div>
+        <!--
+              <div class="settings_content_right" id="sp1">
+                 Login Panel
+              </div>
+              -->
+        <div class="settings_content_right" id="sp2">
+            <!--
+                                <div id="uid1">Alpha Class</div>
+                                <div id="uid2">Bravo Class</div>
+                                <div id="uid3">Charlie Class</div>
+            -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alphamodal" data-whatever="@fat">Enter as Alpha Class</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bravomodal" data-whatever="@fat">Enter as Bravo Class</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#charliemodal" data-whatever="@fat">Enter as Charlie Class</button>
+
+        </div>
+        <div class="settings_content_right" id="sp3">
+            <input type="text" class="textinput" id="newgamename" placeholder="Game Name" />
+            <input type="text" class="textinput" id="newgamepassword" placeholder="Game Password" />
+            <div id="createnewgame">Create New Game</div>
+        </div>
+        <div class="settings_content_right" id="sp4">
+            Join Game
+        </div>
+        <div class="settings_content_right" id="sp5">
+            A variation of the classic "Risk" board-game.
+        </div>
+        <div id="sphere"></div>
+    </div>
+    <div id="settings_bg"></div>
+
+
+    <!-- START bootstrap model ALPHA-->
+    <div class="modal fade" id="alphamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Welcome to Dominate! -a variation of the boardgame Risk.</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Enter your player name:</label>
+                            <input type="text" class="form-control" id="alphanameinput" placeholder="Your Player Name Here">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Alpha Class Benefit:</label>
+                            <ul>
+                                <li>Gets extra chance when attacking.</li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="uid1">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END bootstrap modal ALPHA-->
+    <!-- START bootstrap model BRAVO-->
+    <div class="modal fade" id="bravomodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Welcome to Dominate! -a variation of the boardgame Risk.</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Enter your player name:</label>
+                            <input type="text" class="form-control" id="bravonameinput" placeholder="Your Player Name Here">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Bravo Class Benefit:</label>
+                            <ul>
+                                <li>Gets extra chance when defending.</li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-extended" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="uid2">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END bootstrap modal BRAVO-->
+    <!-- START bootstrap model CHARLIE-->
+    <div class="modal fade" id="charliemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Welcome to Dominate! -a variation of the boardgame Risk.</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Enter your player name:</label>
+                            <input type="text" class="form-control" id="charlienameinput" placeholder="Your Player Name Here">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Charlie Class Benefit:</label>
+                            <ul>
+                                <li>Troop bonus calculates at every 2 territories instead of every 3.</li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-extended" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="uid3">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END bootstrap modal CHARLIE-->
+
+    <div id="scripts">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r61/three.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+        <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="./javascript/key.js"></script>
+        <script type="text/javascript" src="./javascript/americandomination.js"></script>
+        <script type="text/javascript" src="./javascript/ad_firebase.js"></script>
+        <script type="text/javascript" src="./javascript/sphere.js"></script>
+    </div>
+</body>
+</html>

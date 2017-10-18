@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="./javascript/gd-javascript.js"></script>
+   
+   <link rel="stylesheet" type="text/css" href="./css/gd-css.css" >
+  </head>
+  <body>
+  		<div id="center_width">
+		    <div id="regions_div"></div>
+		    <div id="control_panel">
+
+			    	<table>
+						  <tr>
+						    <td id="cp_title" colspan="2">Region</td>
+						      <td colspan="2" rowspan="2">
+						      	<div id="cp_content">
+							        <select id="region_selector">
+							          <option>Choose a Continent</option>
+							          <option value="world_list,world">World</option>
+							          <option value="africa_list,002">Africa</option>
+							          <option value="europe_list,150">Europe</option>
+							          <option value="americas_list,019">Americas</option>
+							          <option value="asia_list,142">Asia</option>
+							          <option value="oceania_list,009">Oceania</option>
+							        </select>
+							        <select id="subcontinent_selector"></select>
+							        <select id="country_selector"></select>
+							    	</div><!-- end cp_content -->
+   							</td>
+						  </tr>
+						  <tr>
+						      <td id="cp_info1">Controlling Faction</td>
+						      <td id="cp_info2">Troop Count</td>
+						  </tr>
+					</table>
+
+	    </div><!-- end control_panel -->
+    </div><!-- end center_width -->
+  </body>
+</html>
