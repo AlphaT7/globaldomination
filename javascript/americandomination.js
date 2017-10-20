@@ -1,8 +1,9 @@
 
-
+var c = function (d) {
+    console.log(d);
+};
+google.charts.setOnLoadCallback(drawVisualization);
 /*
-google.charts.setOnLoadCallback(drawRegionsMap);
-
 function drawRegionsMap() {
     var data = google.visualization.arrayToDataTable([
         ['Country', 'Popularity'],
@@ -21,9 +22,10 @@ function drawRegionsMap() {
     chart.draw(data, options);
 }
 */
-
+/*
 google.load('visualization', '1', { 'packages': ['geochart'] });
 google.setOnLoadCallback(drawVisualization);
+*/
 var data,
    options,
    chart;
@@ -315,7 +317,8 @@ function drawVisualization() {
 }
  
 function clickHandler(selectedstate, position) {
-   //alert(selectedstate);
+    c(selectedstate);
+    c(position);
    data.setValue(0, 2, 'test');
    //alert(data.getValue(0,2));
    //options.colorAxis.colors[position] = '#806015';
@@ -326,8 +329,8 @@ function clickHandler(selectedstate, position) {
        }
    });
    
-   $('#regions_div path:nth-child(5)').css('stroke-width', '3');
-   $('#regions_div path:nth-child(5)').css('stroke', '#6699cc');
+   $('#regions_div path:nth-child(5'/* + position*/).css('stroke-width', '3');
+   $('#regions_div path:nth-child(5'/* + position*/).css('stroke', '#6699cc');
    chart.draw(data, options);
    
 }
